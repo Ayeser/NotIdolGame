@@ -8,7 +8,7 @@ function Eden() {
     
       <div className="Paragraph" >
           <p>
-          Eden
+          Eden, naming animals
           </p>
       </div>
     )

@@ -8,7 +8,7 @@ function Heaven() {
     
       <div className="Paragraph" >
           <p>
-          Heaven
+          Heaven, Do not store up your treasures on earth. This is the final round, or the bonus round.
           </p>
       </div>
     )

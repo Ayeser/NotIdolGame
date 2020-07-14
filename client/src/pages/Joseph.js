@@ -8,7 +8,7 @@ function Joseph() {
     
       <div className="Paragraph" >
           <p>
-          Joseph
+          Joseph, through the famine and preparing for exodus
           </p>
       </div>
     )

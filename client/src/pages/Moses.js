@@ -8,7 +8,7 @@ function Moses() {
     
       <div className="Paragraph" >
           <p>
-          The Israelites and Moses
+          The Israelites and Moses, wandering through the desert
           </p>
       </div>
     )

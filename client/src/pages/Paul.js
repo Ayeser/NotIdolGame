@@ -8,7 +8,7 @@ function Paul() {
     
       <div className="Paragraph" >
           <p>
-          Paul
+          Paul, missionary fundraising
           </p>
       </div>
     )
