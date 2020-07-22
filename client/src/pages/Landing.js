@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../utils/API";
 import Nav from "../components/Nav";
 import CounterButton from "../components/CounterButton";
+import ClockButton from "../components/ClockButton";
 import { Col, Row, Container } from "../components/Grid";
 
 function Landing() {
@@ -23,6 +24,8 @@ function Landing() {
 <CounterButton Number={1} />
 <CounterButton Number={2} />
 <CounterButton Number={3} />
+
+<ClockButton InitTime={1000} />
 </Col>
 <Col size="md-1 sm-2" />
 
