@@ -3,13 +3,11 @@ import React, { useState, useEffect } from "react";
 function ClockButton(InitTime) {
   const [time, setClock] = useState({seconds: InitTime.InitTime, level: 1});
 
-  useEffect(() => {
-        const interval = setInterval(() => {
-            setClock({seconds: time.seconds - 1, level: time.level})
-        }, 1000);
-        return () => clearInterval(interval);
-      }, []);
-
+  setInterval(function(){
+    let newNum = time.seconds - 1;
+    setClock({seconds: newNum, level:1});
+  }, 1000);
+    
   return (
     <div>
     <button>
