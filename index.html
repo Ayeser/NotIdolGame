@@ -28,7 +28,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Tutorial</a></li>
+        <li><a href="#">More Levels Coming</a></li>
         <!-- <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Levels
           <span class="caret"></span></a>
@@ -46,15 +46,16 @@
 
 <!-- Clickers -->
 <div id="clickers" class="container text-center">
-
+<div class="row">
   <h3>Clickers</h3>
   <p><em>Click buttons below to build up</em></p>
+</div>
   <br>
   <div class="row">
-      <div><button onclick="buttonClick()">
-        <div><p>Level: </p><p id="level">1</p></div>
+      <div class="col-sm-12"><button onclick="buttonClick()">
+        <p id="level"> Level 1</p>
         <div><p id="pointsa">0</p><p>/</p><p id="pointsb">10</p></div>
-        </button>
+      </button>
       </div>
     </div>
 
@@ -65,14 +66,33 @@
   <div class="container">
     <h3 class="text-center">Countdowns</h3>
     <div class="row text-center">
+
       <button onclick="startTimer()">
-<p>Level: </p><p id="tickerLvl">1</p>
+        <p id="tickerLvl"> Level 1</p>
 <p id="tickerOne">10</p>
       </button>    
           </div>
   </div>
 </div>
 
+<div id="powerups" class="container text-center">
+  <div class="row">
+    <h3>Powerups</h3>
+    <p><em>Here will be the store of available powerups</em></p>
+    <button onclick="clickerPower()">
+      <p id="clickerPowerLvl">Level 1</p>
+      <p id="clickerPower">When you achieve level 3, click to unlock. Tiny first powerup: adds 10 clicks</p>
+    </button>  
+
+  </div>
+    <br>
+  </div>
+
+  <div id="fourth" class="bg-1">
+    <div class="container">
+      
+    </div>
+  </div>
 
 <footer class="text-center">
   <a class="up-arrow" href="#" data-toggle="tooltip" title="TO TOP">

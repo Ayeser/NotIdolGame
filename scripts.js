@@ -21,10 +21,11 @@ $(document).ready(function(){
 function buttonClick() {
 let a = parseInt($("#pointsa").text());
 let b = parseInt($("#pointsb").text());
-let level = parseInt($("#level").text());
+let sublevel = $("#level").text();
+let level = parseInt(sublevel.replace('Level ', ''));
 
 if(a + 1 >= parseInt(b)) {
-  $("#level").text(level + 1);
+  $("#level").text("Level " + (level + 1));
   $("#pointsa").text(0);
   $("#pointsb").text(b * 2)
 } else {
@@ -39,10 +40,21 @@ if(a + 1 >= parseInt(b)) {
       $("#tickerOne").text(newNum);
       console.log(newNum);
       if (newNum <= 0) {
-        let tickerLvl = parseInt($("#tickerLvl").text())
+        let subtickerLvl = $("#tickerLvl").text();
+        let tickerLvl = parseInt(subtickerLvl.replace('Level ', ''))
         $("#tickerOne").text(300);
         $("#tickerLvl").text(tickerLvl + 1);
       }
     }, 1000);
 
+}
+
+function clickerPower() {
+  let cpow = parseInt($("#clickerPowerLvl").text().replace('Level ', ''));
+  if (parseInt(cpow) === 1 && $("#level").text() === "Level 3") {
+    $("#clickerPowerLvl").text("Level 2");
+    let afterPowerClick = parseInt($("#pointsa").text()) + 10;
+    $("#pointsa").text(afterPowerClick);
+    $("#clickerPower").text("More powerups coming soon");
+  }
 }
