@@ -22,10 +22,12 @@ function buttonClick() {
 let a = parseInt($("#pointsa").text());
 let b = parseInt($("#pointsb").text());
 let sublevel = $("#level").text();
+let fruit = parseInt($("#fruit").text());
 let level = parseInt(sublevel.replace('Level ', ''));
 
 if(a + 1 >= parseInt(b)) {
   $("#level").text("Level " + (level + 1));
+  $("#fruit").text(fruit + 1);
   $("#pointsa").text(0);
   $("#pointsb").text(b * 2)
 } else {
@@ -37,6 +39,7 @@ if(a + 1 >= parseInt(b)) {
   function startTimer() {
     setInterval(function(){
       let newNum = parseInt($("#tickerOne").text()) - 1;
+      let tools = parseInt($("#tools").text());
       $("#tickerOne").text(newNum);
       console.log(newNum);
       if (newNum <= 0) {
@@ -44,6 +47,7 @@ if(a + 1 >= parseInt(b)) {
         let tickerLvl = parseInt(subtickerLvl.replace('Level ', ''))
         $("#tickerOne").text(300);
         $("#tickerLvl").text(tickerLvl + 1);
+        $("#tools").text(tools + 1);
       }
     }, 1000);
 
@@ -51,10 +55,14 @@ if(a + 1 >= parseInt(b)) {
 
 function clickerPower() {
   let cpow = parseInt($("#clickerPowerLvl").text().replace('Level ', ''));
-  if (parseInt(cpow) === 1 && $("#level").text() === "Level 3") {
+  let fruit = parseInt($('#fruit').text());
+
+  if (fruit == 3) {
     $("#clickerPowerLvl").text("Level 2");
     let afterPowerClick = parseInt($("#pointsa").text()) + 10;
     $("#pointsa").text(afterPowerClick);
+    $("#pointsa").text(afterPowerClick);
     $("#clickerPower").text("More powerups coming soon");
+    $('#fruit').text(fruit - 3);
   }
 }

@@ -26,6 +26,14 @@
       </button>
       <a class="navbar-brand" href="#">Not Idol Game</a>
     </div>
+    <div><img src="./assets/images/BlueLootBox_14_t.PNG" alt="clickerLogo" width="50" height="60">
+<span id="fruit">0</span>
+    <img src="./assets/images/BlueLootBox_55_t.PNG" alt="clickerLogo" width="50" height="60">
+  <span id="tools">0</span>
+    <!-- <img src="./assets/images/BlueLootBox_69_t.PNG" alt="clickerLogo" width="50" height="60">
+  <span id="growths">0</span> -->
+  </div>
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">More Levels Coming</a></li>
@@ -46,15 +54,18 @@
 
 <!-- Clickers -->
 <div id="clickers" class="container text-center">
+  <div class="row"><br><br></div>
 <div class="row">
   <h3>Clickers</h3>
   <p><em>Click buttons below to build up</em></p>
 </div>
   <br>
   <div class="row">
-      <div class="col-sm-12"><button onclick="buttonClick()">
-        <p id="level"> Level 1</p>
-        <div><p id="pointsa">0</p><p>/</p><p id="pointsb">10</p></div>
+      <div class="col-sm-12">
+        <img src="./assets/images/BlueLootBox_14_t.PNG" alt="clickerLogo" width="50" height="60">
+        <button onclick="buttonClick()">
+        <span id="level"> Level 1</span>
+        <div><span id="pointsa">0</span><span>/</span><span id="pointsb">10</span></div>
       </button>
       </div>
     </div>
@@ -66,7 +77,8 @@
   <div class="container">
     <h3 class="text-center">Countdowns</h3>
     <div class="row text-center">
-
+      <img src="./assets/images/BlueLootBox_55_t.PNG" alt="clickerLogo" width="50" height="60">
+        
       <button onclick="startTimer()">
         <p id="tickerLvl"> Level 1</p>
 <p id="tickerOne">10</p>
@@ -79,9 +91,10 @@
   <div class="row">
     <h3>Powerups</h3>
     <p><em>Here will be the store of available powerups</em></p>
+    <img src="./assets/images/BlueLootBox_69_t.PNG" alt="clickerLogo" width="50" height="60">
     <button onclick="clickerPower()">
-      <p id="clickerPowerLvl">Level 1</p>
-      <p id="clickerPower">When you achieve level 3, click to unlock. Tiny first powerup: adds 10 clicks</p>
+      <p id="clickerPowerLvl">Cost: 3 fruit</p>
+      <span id="clickerPower">When you earn three fruit, click to unlock. Tiny first powerup: adds 10 clicks</span>
     </button>  
 
   </div>
