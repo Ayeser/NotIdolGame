@@ -41,7 +41,6 @@ if(a + 1 >= parseInt(b)) {
       let newNum = parseInt($("#tickerOne").text()) - 1;
       let tools = parseInt($("#tools").text());
       $("#tickerOne").text(newNum);
-      console.log(newNum);
       if (newNum <= 0) {
         let subtickerLvl = $("#tickerLvl").text();
         let tickerLvl = parseInt(subtickerLvl.replace('Level ', ''))
@@ -56,13 +55,19 @@ if(a + 1 >= parseInt(b)) {
 function clickerPower() {
   let cpow = parseInt($("#clickerPowerLvl").text().replace('Level ', ''));
   let fruit = parseInt($('#fruit').text());
-
-  if (fruit == 3) {
-    $("#clickerPowerLvl").text("Level 2");
+  let tools = parseInt($("#tools").text());
+  let level = $("#clickerPowerLvl").text();
+  if (fruit >= 3) {
+    $("#clickerPowerLvl").text("Cost: 2 Hammers");
     let afterPowerClick = parseInt($("#pointsa").text()) + 10;
     $("#pointsa").text(afterPowerClick);
-    $("#pointsa").text(afterPowerClick);
-    $("#clickerPower").text("More powerups coming soon");
+    $("#clickerPower").text("When you have two hammers, click here to beat the game!");
     $('#fruit').text(fruit - 3);
+  }
+  if (tools >= 2 && level === "Cost: 2 Hammers") {
+    console.log(level);
+    $("#clickerPowerLvl").text("Done");
+    $("#clickerPower").text("Congratulations, you beat the game!");
+    $('#tools').text(tools - 2);
   }
 }
